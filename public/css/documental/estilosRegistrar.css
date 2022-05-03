@@ -1,0 +1,48 @@
+
+
+.divborde{
+    border-bottom: 2px solid #E6E9ED;
+    padding: 1px 5px 6px;
+    margin-bottom: 10px;
+}
+
+.divborde h2{
+    margin: 5px 0 6px;
+}
+
+.alertH{
+    padding:0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 18px;
+}
+
+.col_100{
+    width: 100%;
+}
+
+/* estilo para vista certificado cuenta */
+/* estilos para escritorio */
+@media screen and (min-width: 767px) {
+    .btnFilePhone{
+        width:160px;
+    }
+}
+
+/* estilos solo para telefonos */
+@media screen and (max-width: 767px){
+    .btnFilePhone{
+        width:100%;
+    }
+    .contenFilePhone{
+        width: 100%;
+    }
+}
+
+.form-control-1{
+    border: 1px solid rgb(136, 158, 182) !important;
+}
+
+.form-control-1:focus{
+    border: 1px solid rgb(136, 158, 182) !important;
+}

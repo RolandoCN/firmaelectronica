@@ -1,0 +1,48 @@
+    
+    .check_dias{
+        background-color: transparent;
+        border: 1px solid #ccc;
+        /* border-radius: 30px; */
+        /* padding: top right bottom left */
+        padding: 8px 5px 6px 15px;
+        width: 100%;
+    }
+    .check_dias label{
+        margin-bottom: 0px !important;
+        margin-right: 10px !important;
+    }
+    .check_dias .icheckbox_flat-green{
+        margin-right: 8px !important;
+    }
+    .no_selecionar{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+    }
+
+
+    .head_info{
+    background: #F2F5F7;
+    padding: 10px 13px 10px 13px;
+    width: 100%;
+    margin: 0px 0px 15px 0px;
+    border-radius: 5px;
+    display: block;
+    border: solid 1px #a0a0a029;;
+    }
+
+    .head_info .info_title{
+    font-weight: bold;
+    }
+
+    .head_info .info_title{
+    margin-right: 20px;
+    }
+
+    /* estilos solo para telefonos */
+    @media screen and (max-width: 767px){
+        .check_dias{
+            width: 100%;
+        }
+    }

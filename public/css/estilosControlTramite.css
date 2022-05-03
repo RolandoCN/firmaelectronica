@@ -1,0 +1,150 @@
+
+    span.label{
+        padding: 3px 7px; font-size: 13px; display: block;
+    }
+    b>i.fa{
+        font-size: 16px; width: 20px; text-align: center; color: #337ab7;
+    }
+    .label-warning{
+        background-color: #fd9400;
+    }
+    .center_vertical{
+        vertical-align: inherit !important;
+    }
+    .check_dias{
+        background-color: transparent;
+        border: 1px solid #ccc;           
+        padding: 8px 5px 6px 15px;
+        width: 100%;
+    }
+    .check_dias label{
+        margin-bottom: 0px !important;
+        margin-right: 10px !important;
+    }
+    .check_dias .icheckbox_flat-green{
+        margin-right: 8px !important;
+    }
+
+    /* label para mistrar estado de trámite */
+    span.label2 {
+        padding: 3px 7px;
+        font-size: 13px;
+        display: block;
+        line-height: initial;
+        text-align: center;
+        background-color: #fff;
+    }
+    .label2-success{
+        border: 2px solid #01b703;
+        font-weight: 600;
+        border-radius: 5px;
+        color: #028400;
+    }
+
+    .label2-danger{
+        border: 2px solid #e74c3c;
+        font-weight: 600;
+        border-radius: 5px;
+        color: #c32b1c;
+    }
+    .label2-primary{
+        border: 2px solid #337ab7;
+        font-weight: 600;
+        border-radius: 5px;
+        color: #337ab7;
+    }
+
+    .user_selec{
+        user-select: none !important;
+    }
+
+    .alert-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+
+    .alert-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+
+    .alert-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+
+    .alert-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+
+    /* ESTILOS PARA EL RESUMEN DE BÚSQUEDA */
+    .content_resultado{
+        border: 1px solid #337ab7;
+        border-radius: 5px;
+        display: inline-grid;
+        padding: 8px 10px;
+        color: #337ab7;
+    }
+
+    /* estilos solo para telefonos */
+    @media screen and (max-width: 767px){
+        .content_resultado{
+            margin-bottom: 10px;
+        }
+        .info_ciudano{
+            margin-bottom: 10px;
+            padding: 0;
+        }
+        .btn_regresar{
+            margin: 0px 0px 8px 0px !important;
+        }
+    }
+
+    .content_resultado .pendientes{
+        margin-right: 10px;        
+        color: #ff0000c7;
+        font-weight: 800;
+    }
+
+    .content_resultado .finalizados{
+        margin-right: 10px;
+        color: #008000d4;
+        font-weight: 800;
+    }
+
+    .chosen-container-multi .chosen-choices{
+        border-radius: 0 !important;
+        padding-left: 8px !important;
+    }
+
+    #info_cont_noregist{
+        color: #da2828;
+        font-size: 15px;
+    }
+
+    #info_cont_noregist>b>i{
+        color: #da2828 !important;
+    }
+
+    /* alerta personalizada */
+    .alert_info_doc{
+        background-color: #F5DDC2;
+        color:#474747;
+        padding: 5px 12px 5px 12px;
+        border: 1px solid #F5CCAC;
+        margin: 20px 15px 0px 15px !important;
+        
+    }
+    /* ------------- */
+
+    .estado_vigencia {
+        font-size: 12px;
+        padding: 5px 7px !important;
+        border-radius: 15px;
+        min-width: 90px !important;
+    }

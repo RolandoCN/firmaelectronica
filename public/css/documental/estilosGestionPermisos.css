@@ -1,0 +1,75 @@
+/* estilos para las tablas convinadas */
+
+.td_primario{
+    border-bottom:0 !important;
+}
+
+.td_secundario{
+    border-top:0 !important;
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+.td_fondo_p{
+    background-color: #f9f9f9 !important;
+}
+.td_fondo_s{
+    background-color: #fff !important;
+}
+
+.inputIconoSeleccionado{
+    float:left; width: 30% !important;
+    margin-right: 6px !important;
+}
+
+.buttonIconoSeleccionado{
+    float:left !important;
+}
+
+
+
+
+/* estilos solo para telefonos */
+@media screen and (max-width: 767px){
+
+}
+@media screen and (max-width: 945px){
+    .inputIconoSeleccionado{
+        float:left; width: 80% !important;
+    }
+
+    .x_content_border_mobil{
+        border-radius: 5px !important;
+        border: 1px solid #E6E9ED !important;
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+
+    .ul_mobil{
+        height: auto !important;
+        padding-bottom: 5px !important;
+        background: rgba(245, 247, 250, 0.562) !important;
+        border-radius: 5px 5px 0px 0px !important;
+        margin-top: 0 !important;
+        margin-bottom: 3px !important;
+        padding-left: 0 !important;
+        /* border: 1px solid #E6E9ED !important; */
+    }
+
+    .ul_mobil li{
+        height: 30px !important;
+        margin-top: 5px !important;
+    }
+
+    .ul_mobil li a{
+        padding-top: 4px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+        padding-bottom: 0px !important;
+
+        height: 30px !important;
+    }
+}
+
+
+/* fin estilos */

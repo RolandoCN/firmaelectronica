@@ -1,0 +1,14 @@
+
+    .scroll_mobil{
+        margin: 0px 10px 0px 10px !important;
+    }
+
+
+    /* estilos solo para telefonos */
+    @media screen and (max-width: 767px){
+
+        .scroll_mobil{
+            overflow: scroll !important;
+        }
+
+    }

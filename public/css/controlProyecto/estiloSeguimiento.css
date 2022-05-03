@@ -1,0 +1,178 @@
+
+    
+    .icon_respon {
+        border: 1px solid #3fa2b9 !important;
+        width: 31px;
+        height: 30px;
+        margin: 5px 10px 5px 0;
+        border-radius: 50%;
+        padding: 3px 6px;
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+
+    .icon_respon i{
+        color: #3fa2b9
+    }
+
+    .icon_respon:hover{
+        border: 2px solid #1abb9c !important;
+        padding: 2px 5px;
+    }
+
+    .icon_respon_user {
+        border: 1px solid #3fa2b9 !important;
+        width: 31px;
+        height: 30px;
+        margin: 5px 10px 5px 0;
+        border-radius: 50%;
+        padding: 0px 7px;
+        font-size: 19px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+
+    .icon_respon_user i{
+        color: #3fa2b9
+    }
+
+    .icon_respon_user:hover{
+        border: 2px solid #1abb9c !important;
+        padding: 0px 6px;
+    }
+
+    table.projects tbody tr td{
+        vertical-align: middle;
+    }
+
+    .list-inline>li {
+        display: inline-block;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .tile_stats_count{
+        width: max-content;
+    }
+
+    .check_dias {
+        background-color: transparent;
+        border: 1px solid #ccc;
+        padding: 8px 5px 6px 15px;
+        width: 100%;
+    }
+
+    .check_dias label {
+        margin-bottom: 0px !important;
+        margin-right: 10px !important;
+    }
+
+    .check_dias .icheckbox_flat-green {
+        margin-right: 8px !important;
+    }
+
+    .chosen-container-multi .chosen-choices {
+        border-radius: 0 !important;
+        padding-left: 8px !important;
+    }
+
+    .btn_status{
+        border-radius: 15px !important;
+        pointer-events: none;
+        margin-bottom: 0px;
+        /* font-weight: 700;
+        border-width: 2px; */
+    }
+
+    /* ESTILOS DETALLE DE PROYECTO */
+
+
+    .icon_act {
+        border: 1px solid #3fa2b9 !important;
+        width: 31px;
+        height: 30px;
+        margin: 5px 10px 5px 0;
+        border-radius: 50%;
+        padding: 1px 6px;
+        font-size: 19px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+
+    .icon_act i{
+        color: #3fa2b9
+    }
+
+    ul.messages li .message_date {
+      text-align: center !important;
+    }
+
+    .date_vitacora{
+      padding-left: 12px;
+      font-size: 13px;
+      font-family: monospace;
+    }
+
+    .tooltip_aline .tooltip-inner {
+      max-width: inherit !important;
+      width: max-content !important;
+      white-space: pre-line;
+      line-height: 1.4;
+      text-align: left;      
+    }
+
+    ul.messages li .message_date .date{
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .fa_sm{
+        font-size: 16px !important;
+        margin-top: 3px !important;
+        margin-left: 2px !important;
+        margin-right: 2px !important;
+    }
+
+
+    /* VISTA PAR VENTANAS PEQUEÑAS Y TABLETAS O CELULAR EN ORIZONTAL */
+    @media screen and (max-width: 1160px) and (min-width: 767px){
+      ul.nav_tabs_tramite li{
+          margin-top: -24px !important;
+          /* width: 90%; */
+      }
+
+      ul.nav_tabs_tramite li a{
+          padding: 5px 17px !important;
+          width: 100px !important;
+      }      
+    }
+
+
+    /* ESTILO SOLO PARA CELULAR VERTICAL */
+    @media screen and (max-width: 767px){
+
+      ul.nav_tabs_tramite li a{
+          padding: 5px 10px !important;
+      }
+
+      ul.nav_tabs_tramite li a span{
+          display: none !important;
+      }
+
+      ul.nav_tabs_tramite li a i{
+          display: inline !important;
+          font-size: 20px;
+      }
+
+      .message_date>h3{
+          display: none;
+      }
+      .message_date>p{
+        display: none;
+      }
+
+    }

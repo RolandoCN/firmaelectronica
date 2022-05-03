@@ -1,0 +1,540 @@
+
+body{
+    background: #2A3F54;
+}
+
+.soloinfo{
+    pointer-events:none; 
+    opacity:1;
+}
+
+
+.nameMenu{
+    padding-left: 5px !important;
+}
+
+.tipoFPMenu{
+    /* background-color: rgb(26, 55, 82) !important; */
+    background: rgba(255,255,255,.05) !important;
+    padding: 3px 5px 3px 5px !important;
+    margin-top:5px !important;
+    border-radius:3px !important;
+    color: #ddd;
+    width: fit-content !important;
+}
+.content_responsive{
+    overflow: auto;
+    max-height: 260px;
+}
+
+.table-td-sm td{
+    padding: 3px 8px 3px 8px !important;
+}
+
+.table-td-center-vertical td{
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+.btn-padding-lg{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+.disabled_content{
+    pointer-events: none; opacity: 0.75;
+}
+
+/*ESTILOS PARA VENTANA DE CARGA*/
+
+.div_cargar{
+    background-color:rgba(42, 63, 84, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+/*FIN DE ESTILOS PARA VENTANA DE CARGA*/
+
+
+/*ESTILOS PARA CENTRAR UN DIV VERTICAL MENTE*/
+.page{
+    height: 100%;
+}
+
+.container-1{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.container-2{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.imagen_nav{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/* FIN DE ESTILOS PARA CENTRAR UN DIV VERTICAL MENTE*/
+
+/*  ESTILOS DE BOTONES POR DEFECTO DE BOOSTRAP */
+.btn-warning{
+    color: #fff !important;
+    background-color:#f59919 !important;
+    border-color: #d58512 !important;
+
+}
+
+.btn-warning:hover{
+    color: #fff !important;
+    background-color:#ce8115 !important;
+    border-color: #ad6c0f !important;
+
+}
+
+.btn-info{
+    color: #fff !important;
+    background-color:#38a7c9 !important;
+    border-color: #3499b8 !important;
+
+}
+
+.btn-info:hover{
+    color: #fff !important;
+    background-color:#3499b8 !important;
+    border-color: #308ba7 !important;
+
+}
+
+
+.div_scroll{
+    overflow:hidden scroll;
+    height: 200px;
+    border: 1px solid rgba(204, 204, 204, 0.397);
+    border-radius:3px;
+}
+
+.div_informacion{
+    /* border: 1px solid #007bff54;
+    border-radius: 5px;
+    padding:10px;
+    border-left-width: 5px;
+    border-left-color: #007bffa6; */
+    margin-top: 15px;;
+}
+
+.div_informacion .fa{
+    font-size: 20px;
+    margin-right: 5px;
+    /* color: #007bffa6; */
+}
+
+.label_finaliar_fujo{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    /* border-radius: 30px; */
+    /* padding: top right bottom left */
+    /* padding: 10px 5px 8px 15px; */
+    padding: 6px 5px 6px 15px;
+    width: 100%;
+}
+
+.label_finaliar_fujo .icheckbox_flat-green{
+    margin-right: 8px !important;
+}
+
+/*  clase para ingreso de tramites creacion de documentos */
+
+
+/* fin */
+
+/*ESTILOS PARA CENTRAR UN DIV VERTICAL MENTE*/
+    .page{
+        height: 100%;
+    }
+
+    .container-1{
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-2{
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+    }
+/* FIN DE ESTILOS PARA CENTRAR UN DIV VERTICAL MENTE*/
+
+
+/*FIN DE ESTILOS DE BOTONES POR DEFECTO DE BOOSTRAP*/
+
+/* estilos para escritorio */
+@media screen and (min-width: 767px) {
+    .sinmargenbutton{
+        margin-bottom: 0;
+    }
+    .soloMobil{
+        display: none;
+    }
+    .componentLeft{
+        float:left; 
+        width: 75% !important;
+    }
+    .componentRigth{
+        float: right;
+        width: 23%;
+        margin-right: 0;
+    }
+
+    .btn_tabla{
+        margin:0; 
+        float:left;
+        margin-right: 4px;
+    }
+
+    .margintop_pc{
+        margin-top: 19px;
+    }
+
+    .modal_lg_edit{
+      margin-left: 310px !important; 
+        margin-right: 300px !important;      
+    }
+
+
+}
+/* estilos flujo tramite doc act */
+    .f_documento{
+        background-color: white !important;
+        color: #73879C !important;
+        margin-top: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+        border: 1px solid rgba(134, 134, 134, 0.562) !important;
+        border-left-width: 5px !important;
+        border-radius: .35rem !important;
+        border-left-color: #f0ad4e !important;
+    }
+
+    .f_documento span {
+        color: red !important;
+        font-size: 25px !important;
+    }
+    .f_documento i{
+        font-size: 20px !important;
+        margin-right: 8px !important;
+    }
+
+    .f_actividad{
+        background-color: white !important;
+        color: #73879C !important;
+        margin-top: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+        border: 1px solid rgba(134, 134, 134, 0.562) !important;
+        border-left-width: 5px !important;
+        border-radius: .35rem !important;
+        border-left-color: #1ABB9C !important;
+    }
+
+    .f_actividad span {
+        color: red !important;
+        font-size: 25px !important;
+    }
+    .f_actividad i{
+        font-size: 20px !important;
+        margin-right: 8px !important;
+    }
+
+
+    .div_scroll_doc_act{
+        overflow-y: scroll;
+        max-height: 170px;
+        border-radius: .35rem !important;
+    }
+
+    .label_doc_act_select{
+        font-weight: normal !important;
+        margin-bottom: 0px !important;
+    }
+    .label_doc_act_select div{
+        margin-right: 5px !important;
+    }
+
+    
+    .div_scroll_select_doc_act{
+        overflow-y: scroll;
+        max-height: 260px;
+        border-radius: .35rem !important;
+    }
+    
+/* fin */
+
+
+    .msg_list{
+        width: 400px !important;
+    }
+
+
+
+/* estilos solo para telefonos */
+@media screen and (max-width: 767px){
+
+    .msg_list{
+        width: 100% !important;
+    }
+
+    .wizard_mobil_steps{
+        width: auto !important;
+        padding: 0 !important;
+    }
+
+    .wizard_mobil_steps small{
+        display: none !important;
+    }
+
+    .wizard_mobil_steps .step_descr{
+        margin-right: 8px !important;
+    }
+
+    .label_finaliar_fujo{
+        width: 100%;
+    }
+
+    .btn_tabla{
+        margin:0; 
+        float:left;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .componentLeft{
+        float:left; width: 100% !important;
+    }
+
+    .componentRigth{
+        float: left;
+        width: auto;
+        margin-top: 12px;
+    }
+
+    .soloEscritorio{
+        display: none;
+    }
+
+    .submenu_a{
+        display: inline-flex !important;
+        width: 100% !important;
+    }
+    .submenu_a span{
+        width: 100% !important;
+    }
+    .i_submenu{
+        width: 30% !important;
+    }
+
+    .li_nav_name_mobil{
+        float: right; width: 80% !important;
+    }
+
+    .div_nav_name_mobil{
+        padding-right: 5px !important; 
+    }
+
+    .li_nav_notif_mobil{
+        float: right !important;
+    }
+
+
+
+}
+
+
+
+/* estilo para menu */
+.tab_conten a{
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    border-radius: 5px 5px 0px 0px;
+    padding: 15px 15px 15px 15px;
+}
+
+
+.marginB0{
+    margin-bottom: 0 !important;
+}
+
+.paddingTR{
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.paddingTR button{
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.chosen-select-conten .chosen-container-single{
+    width: 100% !important;
+}
+
+.chosen-select-conten .chosen-container-multi{
+    width: 100% !important;
+}
+
+.chosen-container-single .chosen-single{
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+
+
+.conte_selec{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 15px;
+    background: #dcdee66e;    
+    border-radius: .35rem .35rem .35rem .35rem;
+}
+
+.conte_selec label{
+    padding:0;
+    margin:0;
+}
+
+.conte_selec .titulo_conten{
+    padding-right:8px;
+    font-weight:bold;
+}
+
+.conte_selec .texto_conten{
+    font-weight: inherit;
+}
+
+.alert{
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+
+.user_select{
+    user-select: text !important;
+}
+
+
+
+/* ESTILOS PARA ADJUNTAR DOCUMENTOS */
+
+    .div_scroll_doc_act{
+        overflow-y: scroll;
+        max-height: 170px;
+        border-radius: .35rem !important;
+    }
+
+    .hidden_documento{
+        display: none;
+    }
+
+    .f_documento_adjunto{
+        background-color: white !important;
+        color: #73879C !important;
+        margin-top: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+        border: 1px solid rgba(134, 134, 134, 0.562) !important;
+        border-left-width: 5px !important;
+        border-radius: .35rem !important;
+        border-left-color: #169F85 !important;
+    }
+
+    .f_documento_adjunto .icono_left {
+        font-size: 20px !important;
+        margin-right: 8px !important;
+    }
+
+    .btn_doc_creado{
+        float: right;
+        font-size: 15px;
+        font-weight: 100;
+        line-height: 1;
+        margin: -2px 0 0 8px !important;
+    }
+
+
+
+
+
+
+
+
+/* TOMADOS DE ESTILOS GENERALES DE DOCUMENTAL */
+
+.nav_rol li:after{
+    border-left: 1px solid #92a2b1b5 !important;
+}
+
+.nav_rol li::before{
+    background: #b2bdc8 !important;
+}
+
+.nav_rol li a:hover{
+    background-color: #f5f5f5  !important;
+}
+
+
+/* el li del rol seleccioando */
+    .li_ro_select::after{
+        border-left: 1px solid #92a2b1b5 !important;
+    }
+
+    .li_ro_select::before{
+        background: #00a65a !important;
+    }
+
+
+/* estilos para scroll personalizado */
+
+    .content_scroll{
+        overflow: auto !important;
+        border: 1px solid #f0f0f0 !important;
+    }
+
+      
+    .content_scroll::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    .content_scroll {
+        --scrollbarBG: #CFD8DC;
+        --thumbBG: #90A4AE;
+    }
+    .content_scroll::-webkit-scrollbar {
+        width: 11px;
+    }
+    .content_scroll {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    .content_scroll::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+    .content_scroll::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG) ;
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
+    }

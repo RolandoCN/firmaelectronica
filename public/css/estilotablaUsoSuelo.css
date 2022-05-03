@@ -1,0 +1,21 @@
+.ltable
+{
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+td, th /* Asigna un borde a las etiquetas td Y th */
+{
+    border: 1px solid black;
+}
+
+.sinbordeencabezado /* Asigna un borde a las etiquetas td Y th */
+{
+    border: 0px solid black;
+}
+.fuenteSubtitulo{
+	font-size: 12px;
+}
+.pad{
+	padding-left:5px;
+	padding-right:5px;
+}
