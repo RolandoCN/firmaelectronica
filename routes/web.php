@@ -62,6 +62,7 @@ Auth::routes();
         Route::post('/firmar', 'FirmaDocumentos\FirmaDocumentoController@generar')->middleware('auth');
         Route::get('visualizardoc/{documentName}', 'FirmaDocumentos\FirmaDocumentoController@visualizardoc')->middleware('auth');
         Route::get('descargarDoc/{documentName}','FirmaDocumentos\FirmaDocumentoController@descargarDoc')->middleware('auth');
+        Route::post("/eliminarDocumentos", "FirmaDocumentos\FirmaDocumentoController@eliminarDocumentos")->middleware('auth');
 
     });
 

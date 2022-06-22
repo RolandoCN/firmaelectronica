@@ -57,6 +57,7 @@
                                         <select data-placeholder="Seleccione Un Formato" style="width: 100%;" class="form-control select2" id="formato" name="formato" >  
                                             <option value="" class="class_formato">Selecccione un formato</option>                                      
                                             <option value="A4" class="class_formato">A4</option>
+                                            <option value="A1" class="class_formato">A1</option>
                                             <option value="A5" class="class_formato">A5</option>
                                             <option value="A3" class="class_formato">A3</option>
                                         </select>                     

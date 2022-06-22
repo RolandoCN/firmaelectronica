@@ -924,5 +924,54 @@ class FirmaDocumentoController extends Controller
         return $random_string;
     }
 
+    //ELIMINAR VARIOS O UN DOCUEMTO SELECCIONADO EN EL CHECK
+    public function eliminarDocumentos(Request $request){
+        // dd($request->all());
+        $transaction=DB::transaction(function() use ($request){
+            try {        
+                $documento=$request->iddocumentos;
+                if(sizeof($documento)==0){
+                    return response()->json([
+                        "error" => true,
+                        "mensaje" => "Debe seleccionar al menos un documento",
+                    ]);
+                }
+                $correcto=0;
+                foreach($documento as $iddoc){
+                    $eliminarDoc= FirmarDocumentosModel::find($iddoc);                
+                    $exists = Storage::disk('public')->exists($eliminarDoc->documento);
+                    if($exists){
+                        Storage::disk('public')->delete($eliminarDoc->documento);
+                        Storage::disk('public')->delete($eliminarDoc->respaldo);
+                        $eliminarDoc->delete();
+                        $correcto=$correcto+1;
+                    }
+                }
+                if($correcto>0){
+                    return response()->json([
+                        "error" => false,
+                        "mensaje" => "Documento(s) borrado(s) exitosamente",
+                    ]);
+                }else{
+                    return response()->json([
+                        "error" => true,
+                        "mensaje" => "No se pudo eliminar la informacion",
+                    ]);
+                }
+
+
+                
+            } catch (\Throwable $e) {
+                DB::rollback();
+                Log::error(__CLASS__." => ".__FUNCTION__." => Mensaje =>".$e->getMessage());
+                return response()->json([
+                    "error" => true,
+                    "mensaje" => "Ocurrio un error",
+                ]);
+            }
+        });
+        return ($transaction);
+    }
+
 
 }

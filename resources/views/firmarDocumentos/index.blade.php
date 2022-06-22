@@ -54,12 +54,12 @@
                             <div class="clearfix"></div>
                         </div>
                         
-
                         <div class="row">
                             <div class="col-md-12 col-sm-12" align="center">
-                                <button type="button" class="btn btn-default hidden " id="btnSeleccionar" onclick="seleccionarTodos()"> <span class="fa fa-check"></span> Seleccionar Todos</button>
+                                <button type="button" class="btn btn-default" style="display: none" id="btnSeleccionar" onclick="seleccionarTodos()"> <span class="fa fa-check"></span> Seleccionar Todos</button>
                                 <button type="button" onclick="firmarEmisiones()" class="btn btn-success"><span class="fa fa-file-o"></span> Firmar Documentos</button>
                                 <button type="button" class="btn btn-primary" id="btnSub" onclick="subirNuevoArchivo()"> <span class="fa fa-check"></span> Nuevo Documento</button>
+                                <button type="button" class="btn btn-warning" style="display: none" id="btnEliminar" onclick="eliminarArchivo()"> <span class="fa fa-trash"></span> Eliminar</button>
 
                             </div>
                    

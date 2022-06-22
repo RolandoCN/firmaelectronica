@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    cargar_listado();   
+    cargar_listado();
     var error=$('#error').val();
-    var correcto=$('#correcto_').val();
-   
+    var correcto=$('#correcto_').val();   
    
     console.log("correcto "+correcto);
     console.log("error "+error);
@@ -30,19 +29,25 @@ function cargar_listado(){
 	$("#TablaDocumentos tbody").html(`<tr><td colspan="${num_col}" style="padding:40px; 0px; font-size:20px;"><center><span class="spinner-border" role="status" aria-hidden="true"></span><b> Obteniendo información</b></center></td></tr>`);   
    
     $.get("/firmaArchivo/cargarListado", function(data){
-        
+       
         if(data.error==true){
+            ('#btnSeleccionar').hide();
+            $('#btnEliminar').hide();
             $("#TablaDocumentos tbody").html('');
             $("#TablaDocumentos tbody").html(`<tr><td colspan="${num_col}"><center>No existen registros</center></td></tr>`);
             alertNotificar(data.mensaje,'error');
             return;                      
         }
         if(data.resultado.length==0){
+            ('#btnSeleccionar').hide();
+            $('#btnEliminar').hide();
             $("#TablaDocumentos tbody").html('');
             $("#TablaDocumentos tbody").html(`<tr><td colspan="${num_col}"><center>No existen registros</center></td></tr>`);
             return;                      
 
         }
+        $('#btnSeleccionar').show();
+        $('#btnEliminar').show();
         $("#TablaDocumentos tbody").html('');
         var contador=0;
         $.each(data['resultado'], function(i, item){
@@ -111,6 +116,8 @@ function cargar_listado(){
         cargar_estilos_tabla("TablaDocumentos",10);
     
     }).fail(function(){
+        ('#btnSeleccionar').hide();
+        $('#btnEliminar').hide();
         $("#TablaDocumentos tbody").html('');
         $("#TablaDocumentos tbody").html(`<tr><td colspan="${num_col}"><center>No existen registros</center></td></tr>`);
         alertNotificar("Se produjo un error, por favor intentelo más tarde","error");  
@@ -214,6 +221,65 @@ function reseterarBtnSeleccion(){
     $('#btnSeleccionar').attr('onClick','seleccionarTodos()');
 }
 
+function eliminarArchivo(){
+    var inputs=$('.contet_documento_selec').find('input');
+    if(inputs.length==0){
+        alertNotificar("Por favor seleccione los documentos", "default"); return;
+    }
+
+    var array_documentos=[];
+    $("input[name='list_cod_documento[]']").each(function(indice, elemento) {
+        array_documentos.push($(elemento).val());
+    });
+
+    
+    swal({
+        title: "¿Desea eliminar los documentos?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si, continuar",
+        cancelButtonText: "No, cancelar",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    },
+    function(isConfirm) {
+        if (isConfirm) { 
+        
+            vistacargando("m","Espere por favor");          
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            
+            $.ajax({
+                type: "POST",
+                url: '/firmaArchivo/eliminarDocumentos',
+                data: { _token: $('meta[name="csrf-token"]').attr('content'),
+                iddocumentos:array_documentos},
+                success: function(data){
+                   
+                    vistacargando("");                
+                    if(data.error==true){
+                        alertNotificar(data.mensaje,'error');
+                        return;                      
+                    }
+                    alertNotificar(data.mensaje,"success");
+                    cargar_listado();
+                    reseterarBtnSeleccion();
+                    $(".contet_documento_selec").html('');
+                }, error:function (data) {
+                    vistacargando("");
+                    alertNotificar('Ocurrió un error','error');
+                }
+            });
+
+        }
+        sweetAlert.close();   // ocultamos la ventana de pregunta
+    }); 
+}
 
 
 function firmarEmisiones(){
@@ -227,8 +293,6 @@ function firmarEmisiones(){
     $('#input_clave_certificado').val('');
     $('#input_localizacion').val('');
     $('#input_razon').val('');
-    // $('#check_filtrar_visible').prop('checked',true);
-
    
     $("#btn_modal_cerrar").attr("disabled", false);
     $("#informacion_certificado").html("");

@@ -244,6 +244,13 @@ class EdicionPdfController extends \setasign\Fpdi\Fpdi{
                 if($formato_hoja=="A5" && $orientacion_hoja=="H"){$pdf->addPage('L','A5');}
                 if($formato_hoja=="A5" && $orientacion_hoja=="V"){$pdf->addPage('A5');}
 
+                // if($formato_hoja=="A1" && $orientacion_hoja=="H"){$pdf->addPage('L','A1');}
+                // if($formato_hoja=="A1" && $orientacion_hoja=="V"){$pdf->addPage('A1');}
+
+                if($formato_hoja=="A1" && $orientacion_hoja=="H"){$pdf->addPage('P','mm',array(1121,729));}
+                if($formato_hoja=="A1" && $orientacion_hoja=="V"){$pdf->addPage('P','mm',array(1121,729));}
+                
+
                 
                 $templateId = $pdf->importPage($pageNo);
 
@@ -438,6 +445,9 @@ class EdicionPdfController extends \setasign\Fpdi\Fpdi{
     
                 if($formato_hoja=="A5" && $orientacion_hoja=="H"){$pdf->addPage('L','A5');}
                 if($formato_hoja=="A5" && $orientacion_hoja=="V"){$pdf->addPage('A5');}
+
+                if($formato_hoja=="A1" && $orientacion_hoja=="H"){$pdf->addPage('P','mm',array(1121,729));}
+                if($formato_hoja=="A1" && $orientacion_hoja=="V"){$pdf->addPage('P','mm',array(1121,729));}
                 
                 $templateId = $pdf->importPage($pageNo);
 
