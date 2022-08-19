@@ -39,7 +39,7 @@ function cargar_listado(){
             return;                      
         }
         if(data.resultado.length==0){
-            ('#btnSeleccionar').hide();
+            $('#btnSeleccionar').hide();
             $('#btnEliminar').hide();
             $("#TablaDocumentos tbody").html('');
             $("#TablaDocumentos tbody").html(`<tr><td colspan="${num_col}"><center>No existen registros</center></td></tr>`);

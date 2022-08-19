@@ -287,7 +287,8 @@ class FirmaDocumentoController extends Controller
   
                 $objFirmDocManual = new FirmarDocumentoManualesController();  
   
-                $idus001 = auth()->user()->idus001;
+                // $idus001 = auth()->user()->idus001;
+                $idus001 =1;
                 $firma_electronica_conf = FirmaElectronicaModel::where('idus001', $idus001)->first();
   
                 if(!is_null($firma_electronica_conf)){
@@ -774,7 +775,7 @@ class FirmaDocumentoController extends Controller
             $ruta_base =str_replace("\\","/",$ruta_base);
 
             $pdfSigner =  new BSrE_PDF_Signer_Cli();
-            $pdfSigner->addmultipleSign();
+            // $pdfSigner->addmultipleSign();
             $pdfSigner->setDocument($ruta_base.'/storage/app/documentosFirmar/'.$nombre_documento_firmar);
             $pdfSigner->setLibraryPath($ruta_base.'/app/JSignPDF/library');
             $pdfSigner->readCertificateFromFile(

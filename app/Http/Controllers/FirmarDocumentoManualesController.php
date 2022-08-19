@@ -110,7 +110,7 @@ class FirmarDocumentoManualesController extends Controller
 
             // ------------- obtenemos la firma del usuario ---------
 
-                $firma_electronica = FirmaElectronicaModel::where('idus001', auth()->user()->idus001)->first();
+                $firma_electronica = FirmaElectronicaModel::where('idus001',1)->first();
 
                 if(!is_null($firma_electronica)){ // ya se registró una firma en base de datos
 
@@ -203,7 +203,7 @@ class FirmarDocumentoManualesController extends Controller
 
             // ----------------- obtenemos los datos firma configurada --------------------------------------
 
-                $idus001 = auth()->user()->idus001;
+                $idus001 = 1;
                 $firma_electronica_conf = FirmaElectronicaModel::where('idus001', $idus001)->first();
 
                 if(!is_null($firma_electronica_conf)){

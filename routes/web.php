@@ -53,26 +53,26 @@ Auth::routes();
 
 
     Route::prefix('firmaArchivo')->group(function(){
-        Route::resource('listado', "FirmaDocumentos\FirmaDocumentoController")->middleware('auth');
-        Route::get("/cargarListado", "FirmaDocumentos\FirmaDocumentoController@listadoDocumento")->middleware('auth');
-        Route::get("/subir", "FirmaDocumentos\FirmaDocumentoController@subirDocumento")->middleware('auth');
-        Route::get("/eliminar/{id}", "FirmaDocumentos\FirmaDocumentoController@eliminarDocumento")->middleware('auth');
-        Route::post("/nuevoDocumento", "FirmaDocumentos\FirmaDocumentoController@nuevoDocumento")->middleware('auth');
-        Route::post("/simulacionFirma", "FirmaDocumentos\FirmaDocumentoController@simulacionFirma")->middleware('auth');
-        Route::post('/firmar', 'FirmaDocumentos\FirmaDocumentoController@generar')->middleware('auth');
-        Route::get('visualizardoc/{documentName}', 'FirmaDocumentos\FirmaDocumentoController@visualizardoc')->middleware('auth');
-        Route::get('descargarDoc/{documentName}','FirmaDocumentos\FirmaDocumentoController@descargarDoc')->middleware('auth');
-        Route::post("/eliminarDocumentos", "FirmaDocumentos\FirmaDocumentoController@eliminarDocumentos")->middleware('auth');
+        Route::resource('listado', "FirmaDocumentos\FirmaDocumentoController");
+        Route::get("/cargarListado", "FirmaDocumentos\FirmaDocumentoController@listadoDocumento");
+        Route::get("/subir", "FirmaDocumentos\FirmaDocumentoController@subirDocumento");
+        Route::get("/eliminar/{id}", "FirmaDocumentos\FirmaDocumentoController@eliminarDocumento");
+        Route::post("/nuevoDocumento", "FirmaDocumentos\FirmaDocumentoController@nuevoDocumento");
+        Route::post("/simulacionFirma", "FirmaDocumentos\FirmaDocumentoController@simulacionFirma");
+        Route::post('/firmar', 'FirmaDocumentos\FirmaDocumentoController@generar');
+        Route::get('visualizardoc/{documentName}', 'FirmaDocumentos\FirmaDocumentoController@visualizardoc');
+        Route::get('descargarDoc/{documentName}','FirmaDocumentos\FirmaDocumentoController@descargarDoc');
+        Route::post("/eliminarDocumentos", "FirmaDocumentos\FirmaDocumentoController@eliminarDocumentos");
 
     });
 
     Route::prefix('rolesPago')->group(function(){
-        Route::get('generar', 'GestionRolPagoController@index')->middleware('auth');
-        Route::get('getDetallePeriodo', 'GestionRolPagoController@getDetallePeriodo')->middleware('auth');
-        Route::get('generarPDF', 'GestionRolPagoController@generarPDF')->middleware('auth');
-        Route::get('verificarConfigFirmado', 'GestionRolPagoController@verificarConfigFirmado')->middleware('auth'); // ruta para verificar la configuracion del certificado
-        Route::post('getRoles', 'GestionRolPagoController@getRoles')->middleware('auth');
-        Route::post('generarFirmar', 'GestionRolPagoController@generarFirmarRolesPago')->middleware('auth'); // ruta para generar y firmar los roles de pago
+        Route::get('generar', 'GestionRolPagoController@index');
+        Route::get('getDetallePeriodo', 'GestionRolPagoController@getDetallePeriodo');
+        Route::get('generarPDF', 'GestionRolPagoController@generarPDF');
+        Route::get('verificarConfigFirmado', 'GestionRolPagoController@verificarConfigFirmado'); // ruta para verificar la configuracion del certificado
+        Route::post('getRoles', 'GestionRolPagoController@getRoles');
+        Route::post('generarFirmar', 'GestionRolPagoController@generarFirmarRolesPago'); // ruta para generar y firmar los roles de pago
    
     });
 
